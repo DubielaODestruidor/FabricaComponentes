@@ -9,15 +9,10 @@ import Foundation
 
 public class Component {
     
-    public var ComponentName: String
-    public var ComponentPrice: Double
+    public var ComponentName: String { get { self.ComponentName } set { self.ComponentName = newValue } }
+    public var ComponentPrice: Double { get { self.ComponentPrice } set { self.ComponentPrice = newValue } }
 
-    public init(ComponentName: String, ComponentPrice: Double) {
-        self.ComponentName = ComponentName
-        self.ComponentPrice = ComponentPrice
-    }
-
-    public func getComponentName() -> String {
-        return self.ComponentName
+    public func PPrint() {
+        print("Componente: \(ComponentName)\n  | ")
     }
 }
